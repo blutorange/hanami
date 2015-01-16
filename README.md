@@ -207,7 +207,7 @@ Nihongo J-Talk:
 
 Hanami (with unidic):
 
-> mae motte hiroi basho o senyuu suru dantai ya, karaoke no shiyoo ya ongaku o nagashitari, kaki no shiyoo, risshooben, yotta ikioi de sakura no eda o oru, ki o kizutsukeru nado, sakura ni aku-eekyoo o ataetari, ta no hanami kyaku ya kinrin juumin ni taisuru meewaku kooi o okonau shuudan°dantai ga fue, ookina shakai mondai to natteiru.
+> mae motte hiroi basho o senyuu suru dantai ya, karaoke no shiyoo ya ongaku o nagashitari, kaki no shiyoo, risshooben, yotta ikioi de sakura no eda o oru, ki o kizutsukeru nado, sakura ni aku-eekyoo o ataetari, ta no hanami kyaku ya kinrin juumin ni taisuru meewaku kooi o okonau shuudan.dantai ga fue, ookina shakai mondai to natteiru.
 
 So I'd say, this gem doesn't fare to badly. 
 

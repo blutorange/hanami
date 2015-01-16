@@ -2,7 +2,7 @@
 
 module Hanami
     PUNCTUATION = {
-        '・' => '°', #this can be used in so many ways...
+        '・' => '.', #this can be used in so many ways...
         '※' => '#',
         '　' => ' ', # full width space to half width
         '、' => ',',
