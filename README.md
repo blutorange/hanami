@@ -177,7 +177,7 @@ provide should provide something that isn't too hard too read.
 
 A quick example using this gem, and the above mentioned tools:
 
-Japanese sentence:
+[Japanese sentence:](http://ja.wikipedia.org/w/index.php?title=%E8%8A%B1%E8%A6%8B)
 
 > 前もって広い場所を占有する団体や、カラオケの使用や音楽を流したり、火気の使用、立小便、酔った勢いで桜の枝を折る、木を傷つけるなど、桜に悪影響を与えたり、他の花見客や近隣住民に対する迷惑行為を行う集団・団体が増え、大きな社会問題となっている。
 
@@ -191,19 +191,19 @@ Nihongo J-Talk:
 
 Hanami (with unidic):
 
-> maemotte hiroi basho o senyuu suru dantai ya, karaoke no shiyoo ya ongaku o nagashitari, kaki no shiyoo,risshooben,yotta ikioi de sakura no eda o oru, ki o kizutsukeru nado, sakura ni aku-eekyoo o ataetari, ta no hanami kyaku ya kinrin juumin ni taisuru meewaku kooi o okonau shuudan?dantai ga fue, ookina shakai mondai tonatteiru.
+> mae motte hiroi basho o senyuu suru dantai ya, karaoke no shiyoo ya ongaku o nagashitari, kaki no shiyoo, risshooben, yotta ikioi de sakura no eda o oru, ki o kizutsukeru nado, sakura ni aku-eekyoo o ataetari, ta no hanami kyaku ya kinrin juumin ni taisuru meewaku kooi o okonau shuudan°dantai ga fue, ookina shakai mondai to natteiru.
 
-So I'd say, this gem doesn't fare to badyl. 
+So I'd say, this gem doesn't fare to badly. 
 
 Also, this is a good example why I'd say unidic is the best. Compare:
 
 Juman:
 
-> maemotte hiroi basho wo senyuu suru dantai ya, karaoke no shiyou ya ongaku wo nagashitari, kaki no shiyou, ta shouben, yotta ikioi de sakura no eda wo oru, ki wo kizutsukeru nado, sakura ni aku eikyou wo ataetari, tano hanami kyaku ya kinrin juumin ni taisuru meiwaku koui wo okonau shuudan? dantai ga fue, ookina shakai mondai to natteiru.
+> maemotte hiroi basho wo senyuu suru dantai ya, karaoke no shiyou ya ongaku wo nagashitari, kaki no shiyou, ta shouben, yotta ikioi de sakura no eda wo oru, ki wo kizutsukeru nado, sakura ni aku eikyou wo ataetari, tano hanami kyaku ya kinrin juumin ni taisuru meiwaku koui wo okonau shuudan° dantai ga fue, ookina shakai mondai to natteiru.
 
 Ipadic:
 
-> maemotte hiroi basho o senyuu suru dantai ya, karaoke no shiyoo ya ongaku o nagashitari, kaki no shiyoo, tatsu shooben,yotta ikioi de sakura no eda o oru, ki o kizutsukeru nado, sakura ni akueikyoo o ataetari, ta no hanami kyaku ya kinrin juumin nitaisuru meiwaku kooi o okonau shuudan? dantai ga fue, ookina shakai mondai tonatteiru.
+> maemotte hiroi basho wo senyuu suru dantai ya, karaoke no shiyou ya ongaku wo nagashitari, kaki no shiyou, tatsu shouben, yotta ikioi de sakura no eda wo oru, ki wo kizutsukeru nado, sakura ni akueikyou wo ataetari, ta no hanami kyaku ya kinrin juumin nitaisuru meiwaku koui wo okonau shuudan° dantai ga fue, ookina shakai mondai to natteiru.
 
 Note especially `立小便`.
 
