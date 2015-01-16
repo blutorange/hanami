@@ -1,0 +1,9 @@
+require_relative "./version"
+require_relative "./romaji_tables"
+require_relative "./conversion"
+require_relative "./detection"
+require_relative "./moji"
+
+class String
+  include Mojinizer
+end
