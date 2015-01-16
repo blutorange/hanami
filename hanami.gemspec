@@ -14,13 +14,24 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
+  ['ipadic-utf8', 'unidic-utf8', 'juman-utf8'].each do |dicdir|
+    spec.files << "dic/#{dicdir}"
+    ['AUTHORS','char.bin','COPYING','dicrc','matrix.bin','sys.dic','unk.dic','version'].each do |dicfile|
+      file = "dic/#{dicdir}/#{dicfile}"
+      if !File.exists?(file)
+        puts "Make sure you extract the dictionary files in ./dic/dic.tar.gz first!"
+        exit
+      end
+      spec.files << "dic/#{dicdir}/#{dicfile}"
+    end
+  end
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(tests|spec|features)/})
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "moji", "~> 1.6"
+  spec.add_runtime_dependency "mecab", "~> 0.98", '>= 0.98'
   spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake", "~> 10.0.4"
-  spec.add_development_dependency "rspec", "~> 2.13.0"
-  spec.add_development_dependency "mecab", "~> 0.98"
+  spec.add_development_dependency "rake", '~> 10.0', '>= 10.0.4'
+  spec.add_development_dependency "rspec", '~> 2.13', '>= 2.13.0'
 end

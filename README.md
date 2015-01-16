@@ -87,8 +87,24 @@ puts Hanami.to_ascii(japanese, :dic => :ipadic, :add_unihan_info => true)
 Installing & Links
 ------------------
 
-Installing should be pretty straigh-forward. Uncompress the dictionary files
-in ./dic first.
+Installing should be pretty straigh-forward. 
+
+- Uncompress the dictionary files in ./dic/dic.tar.gz first.
+
+- Build & install gem.
+
+```bash
+$ gem build hanami.gemspec
+$ gem install hanami-0.0.1.gem
+```
+
+- Load gem with
+
+```ruby
+require 'hanami`
+Hanami.to_romaji('日本語', :dic => :ipadic)
+  => "nihongo"
+```
 
 Needs the <gem> mecab, which needs `mecab`, which can be found here:
 
