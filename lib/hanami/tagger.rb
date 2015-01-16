@@ -34,6 +34,8 @@ module Hanami
     # previous / following word.
     # Lookup table ist <mergers>.
     def self.mergable?(f, g, mergers)
+        # っ should never occur at a word boundary
+        return true if f[3][-1] == 'っ' || g[1] == 'っ'
         val = mergers.find do |m|
             if m.class == Array
                 match_merge?(f,m[0]) && match_merge?(g,m[1])

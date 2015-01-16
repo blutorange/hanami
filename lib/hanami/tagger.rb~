@@ -10,8 +10,6 @@ module Hanami
     # Load dictionary dynamically when needed.
     def self.get_tagger(dic)
         dicdir = DICFILE[dic]           
-puts 999
-puts File.expand_path(dicdir)
         TAGGERS[dic] ||= MeCab::Tagger.new ("--dicdir=#{dicdir}")
         return TAGGERS[dic]
     end
@@ -36,6 +34,7 @@ puts File.expand_path(dicdir)
     # previous / following word.
     # Lookup table ist <mergers>.
     def self.mergable?(f, g, mergers)
+        return true if f[3][-1] == 'っ' || g[1] == 'っ'
         val = mergers.find do |m|
             if m.class == Array
                 match_merge?(f,m[0]) && match_merge?(g,m[1])

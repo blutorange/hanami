@@ -30,6 +30,7 @@ module Hanami
         # merge morphemes
         kana = []
         morphemes.each do |feature|
+p feature
             if kana.last && m = mergable?(kana.last.last,feature,merger)
                 feature[n] = m[1] + feature[n]
                 kana.last << feature

@@ -22,7 +22,7 @@ module Hanami
             line.gsub!(japanese) do |jp|
                 kana = kanji_to_kana(jp, opts[:mode], opts[:dic])
                 if opts[:level] == :romaji
-                    kana_to_ascii(kana, opts[:vowels], opts[:system])
+                    kana_to_romaji(kana, opts[:vowels], opts[:system])
                 elsif opts[:level] == :kana
                     kana.hira_to_kata
                 end

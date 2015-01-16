@@ -37,7 +37,7 @@ module Hanami
     end
 
     # Aliases
-    def self.to_romajiascii(a,b={})
+    def self.to_romaji(a,b={})
         b[:level] = :romaji
         to_phonetic(a,b)
     end
