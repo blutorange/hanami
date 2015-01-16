@@ -1,7 +1,0 @@
-# Joins morphemes, for dictionary unidic.
-
-module Hanami
-    MERGERS_UNIDIC = [
-
-    ]
-end

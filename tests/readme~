@@ -1,9 +1,0 @@
-Run with the following command:
-
-$ ruby ../lib/cli.rb [options] < test_xxx
-
-Do
-
-$ ruby ../lib/cli.rb --help
-
-for a list of options.
