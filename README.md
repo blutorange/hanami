@@ -15,17 +15,16 @@ no universal standard for what constitutes a word.
 
 But examples are better than talking, so...
 
-> require 'hanami'
->
-> japanese = '昨日洗濯しなくちゃいけなかった。'
->
-> japanese.encode(Encoding::UTF_8)
->
-> puts Hanami.to_romaji(japanese)
+```ruby
+require 'hanami'
+japanese = '昨日洗濯しなくちゃいけなかった。'
+japanese.encode(Encoding::UTF_8)
+puts Hanami.to_romaji(japanese)
+```
 
 This results in:
 
-> kinoo sentaku shinakucha ikenakatta.
+> kinoo sentaku shinakucha ikenakatta.'
 
 Which is way easier to read than the raw output of mecab, which looks like
 
@@ -36,47 +35,54 @@ In case you want to try it out yourself, there a simple command line script in
 
 If you prefer "ou" instead of "oo":
 
-> puts Hanami.to_romaji(japanese, :mode => :orthographic, :dic => :ipadic)
->
-> => kinou sentaku shinakucha ikenakatta.
+```ruby
+puts Hanami.to_romaji(japanese, :mode => :orthographic, :dic => :ipadic)
+ => 'kinou sentaku shinakucha ikenakatta.'
+```
 
 And if you like macros (ō),
 
-> puts Hanami.to_romaji(japanese, :vowels => :macron)
->
-> => kinō sentaku shinakucha ikenakatta.
+```ruby
+puts Hanami.to_romaji(japanese, :vowels => :macron)
+ => 'kinō sentaku shinakucha ikenakatta.'
+```
 
 Finally, if you're a fan on non-phonetic kunrei-style romanization:
 
-> puts Hanami.to_romaji(japanese, :system => :kunrei)
->
-> => kinoo sentaku sinakutya ikenakatta.
+```ruby
+puts Hanami.to_romaji(japanese, :system => :kunrei)
+ => 'kinoo sentaku sinakutya ikenakatta.'
+```
 
 I have included three dictionaries, as tracking down the right version in
 UTF-8 might not be an easy job. They can be found ./lib, to save space they are
 compressed, extract them first. Different dictionaries may provide different
 results. The default is :unidic, which I think provides the best results overall.
 
-> japanese = '茲に此迄の結果を記す。'
-> puts Hanami.to_romaji(japanese, :dic => :unidic)
->  =>koko ni kore made no kekka o shirusu.
-> puts Hanami.to_romaji(japanese, :dic => :ipadic)
->  => 茲 ni 此迄 no kekka o shirusu.
-> puts Hanami.to_romaji(japanese, :dic => :juman)
->  => 茲 ni 此迄 no kekka wo shirusu.
+```ruby
+japanese = '茲に此迄の結果を記す。'
+puts Hanami.to_romaji(japanese, :dic => :unidic)
+  => 'koko ni kore made no kekka o shirusu.'
+ puts Hanami.to_romaji(japanese, :dic => :ipadic)
+  => '茲 ni 此迄 no kekka o shirusu.'
+ puts Hanami.to_romaji(japanese, :dic => :juman)
+  => '茲 ni 此迄 no kekka wo shirusu.'
+```
 
 Speaking of which, if you ever need pure ascii:
 
-> puts Hanami.to_ascii(japanese, :dic => :ipadic, :add_unihan_info => false)
->  => ? ni ?? no kekka o shirusu.
+```ruby
+puts Hanami.to_ascii(japanese, :dic => :ipadic, :add_unihan_info => false)
+  => '? ni ?? no kekka o shirusu.'
+```
 
 You can set :add_unihan_info to `true` to print some ascii info on those
 characters instead:
 
-> puts Hanami.to_ascii(japanese, :dic => :ipadic, :add_unihan_info => true)
->
->  => {{U+8332: JI SHI; shigeru masu mushiro; now, here; this; time, year}} ni {{U+6B64: SHI; koko kore kono; this, these; in this case, then}}{{U+8FC4: KITSU; oyobu made; extend, reach; until; till}} no kekka o shirusu.
-
+```ruby
+puts Hanami.to_ascii(japanese, :dic => :ipadic, :add_unihan_info => true)
+  => '{{U+8332: JI SHI; shigeru masu mushiro; now, here; this; time, year}} ni {{U+6B64: SHI; koko kore kono; this, these; in this case, then}}{{U+8FC4: KITSU; oyobu made; extend, reach; until; till}} no kekka o shirusu.'
+```
 
 Installing & Links
 ------------------
