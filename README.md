@@ -187,6 +187,8 @@ You can cross-check with some romanization algorithms/tools available on the net
  - https://translate.google.com/m/translate (shows romaji below the Japanese)
  - http://nihongo.j-talk.com/ (from the options, choose "Spaced" and "Romaji")
 
+He didn't release any info on this, but comparing the output from `Nihongo J-Talk` to `hanami`, I'm pretty sure he's doing pretty much the same as this program.
+
 Keep in mind Japanese isn't written with ascii officially, and as such, there
 are no hard rules, especially how to place spaces. This implementation should
 provide should provide something that isn't too hard too read.

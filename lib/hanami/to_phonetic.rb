@@ -17,15 +17,22 @@ module Hanami
         opts[:level] ||= :romaji
         opts[:vowels] ||= :double
         opts[:system] ||= :hepburn
-        japanese = /([[\u3001-\u30ff]|[\u31c0-\u9fff]|[[:punct:]]|[0-9]|[\uff10-\uff19]]+)/
+        japanese = /(.?)([[\u3001-\u30ff]|[\u31c0-\u9fff]|[[:punct:]]|[0-9]|[\uff10-\uff19]]+)(.?)/
         lines = str.lines.map do |line|
             line.gsub!(japanese) do |jp|
-                kana = kanji_to_kana(jp, opts[:mode], opts[:dic])
-                if opts[:level] == :romaji
+                kana = kanji_to_kana($2, opts[:mode], opts[:dic])
+                sub = if opts[:level] == :romaji
                     kana_to_romaji(kana, opts[:vowels], opts[:system])
                 elsif opts[:level] == :kana
                     kana.hira_to_kata
                 end
+                if $1 != ' ' && $1 != '　'
+                    sub = ' ' + sub
+                end
+                if $3 != ' ' && $3 != '　'
+                    sub << ' '
+                end
+                sub
             end
             if opts[:level] == :romaji
                 line.zen_to_han
