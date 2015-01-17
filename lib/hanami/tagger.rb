@@ -1,5 +1,4 @@
 # Calls mecab and parses the output.
-
 module Hanami
 
     # Dictionary files get loaded dynamically when needed.

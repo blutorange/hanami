@@ -9,7 +9,7 @@ module Hanami
         { :type => :suffix, 4 => ['句点']},
         { :type => :suffix, 4 => ['補助記号', '一般']},
         { :type => :suffix, 0 => 'ん'},
-        { :type => :prefix, 4 => ['ダ'], 0 => 'な'},
+        { :type => :suffix, 4 => ['ダ'], 0 => 'な', :add => ' '},
         { :type => :suffix, 4 => ['助詞'], 3 => 'の', :add => ' '},
         { :type => :suffix, 4 => ['助詞','副助詞'], 3 => 'たり'},
         { :type => :suffix, 4 => ['助詞','副助詞'], 3 => 'だり'},

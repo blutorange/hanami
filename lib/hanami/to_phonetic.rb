@@ -17,7 +17,7 @@ module Hanami
         opts[:level] ||= :romaji
         opts[:vowels] ||= :double
         opts[:system] ||= :hepburn
-        japanese = /(.?)([[\u3001-\u30ff]|[\u31c0-\u9fff]|[[:punct:]]|[0-9]|[\uff10-\uff19]]+)(.?)/
+        japanese = /(.??)([[\u3001-\u30ff]|[\u31c0-\u9fff]|[[:punct:]]|[0-9]|[\uff10-\uff19]]+)(.??)/
         lines = str.lines.map do |line|
             line.gsub!(japanese) do |jp|
                 kana = kanji_to_kana($2, opts[:mode], opts[:dic])
@@ -26,11 +26,11 @@ module Hanami
                 elsif opts[:level] == :kana
                     kana.hira_to_kata
                 end
-                if $1 != ' ' && $1 != '　'
-                    sub = ' ' + sub
+                if $1 != ' ' && $1 != '　' && !$1.empty?
+                    sub = $1 + ' ' + sub
                 end
-                if $3 != ' ' && $3 != '　'
-                    sub << ' '
+                if $3 != ' ' && $3 != '　' && !$1.empty?
+                    sub << ' ' + $3
                 end
                 sub
             end
