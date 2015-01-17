@@ -60,13 +60,13 @@ compressed, extract them first. Different dictionaries may provide different
 results. The default is :unidic, which I think provides the best results overall.
 
 ```ruby
-japanese = '茲に此迄の結果を記す。'
+japanese = '茲に此迄の結果を標す。'
 puts Hanami.to_romaji(japanese, :dic => :unidic)
   => 'koko ni kore made no kekka o shirusu.'
  puts Hanami.to_romaji(japanese, :dic => :ipadic)
   => '茲 ni 此迄 no kekka o shirusu.'
  puts Hanami.to_romaji(japanese, :dic => :juman)
-  => '茲 ni 此迄 no kekka wo shirusu.'
+  => '茲 ni 此迄 no kekka wo 標su.'
 ```
 
 Speaking of which, if you ever need pure ascii:
@@ -95,7 +95,7 @@ Installing should be pretty straigh-forward.
 
 ```bash
 $ gem build hanami.gemspec
-$ gem install hanami-0.0.1.gem
+$ gem install hanami-0.0.2.gem
 ```
 
 - Load gem with
