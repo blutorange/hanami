@@ -27,7 +27,7 @@ module Hanami
             LONG_VOWELS[long_vowels][$1]
         end
         # replace full-width punctuation
-        str.gsub!(/([\u3000-\u303f]|[\u30fb])/) do |marker|
+        str.gsub!(/./) do |marker|
             PUNCTUATION[marker] || marker
         end
         str.tr!('─','-')
