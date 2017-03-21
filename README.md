@@ -7,7 +7,7 @@ Transliterates Japanese. Which is (almost) as hard as translating it.
 Ie, it can be done only approximately without a real life human.
 
 Fortunately, most of the hard work has already been done. This gem combines
-[mecab](http://mecab.googlecode.com/svn/trunk/mecab/), a morphological parser
+[mecab](https://github.com/taku910/mecab), a morphological parser
 with a slightly modified version of [mojinizer](https://github.com/ikayzo/mojinizer).
 
 Mecab produces morphemes, this gem merges some of them into "words" - there is
