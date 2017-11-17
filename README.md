@@ -108,7 +108,7 @@ Hanami.to_romaji('日本語', :dic => :ipadic)
 
 Needs the <gem> mecab, which needs `mecab`, which can be found here:
 
-http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html
+https://github.com/taku910/mecab
 
 There's also a ruby port available there, if you should encounter any problems
 installing the <mecab> gem.
