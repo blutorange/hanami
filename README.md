@@ -89,13 +89,15 @@ Installing & Links
 
 Installing should be pretty straigh-forward. 
 
+- Install `apt-get install libmecab-dev`
+
 - Uncompress the dictionary files in ./dic/dic.tar.gz first.
 
 - Build & install gem.
 
 ```bash
 $ gem build hanami.gemspec
-$ gem install hanami-0.0.2.gem
+$ gem install hanami-0.0.3.gem
 ```
 
 - Load gem with
